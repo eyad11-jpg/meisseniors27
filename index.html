@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0A1F4A">
+<meta name="robots" content="noindex">
+<title>MEIS Seniors '27</title>
+<meta name="description" content="Warning: contains pure legends. MEIS Seniors, Class of 2027.">
+<meta property="og:title" content="MEIS Seniors '27">
+<meta property="og:description" content="Hey, you. You found us.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='6' width='52' height='52' rx='14' fill='%23FFC83D' stroke='white' stroke-width='4'/%3E%3Ctext x='32' y='44' font-size='32' text-anchor='middle'%3E%F0%9F%8E%93%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:opsz,wght@9..144,900&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<noscript><p style="padding:30px;font:700 20px sans-serif">This site needs JavaScript. Turn it on and come back, legend.</p></noscript>
+
+<main id="app">
+
+<!-- ============ FRONT DOOR ============ -->
+<section class="screen on" id="splash" aria-label="Welcome">
+  <div class="splash">
+    <header class="top">
+      <button class="msticker" data-m type="button" aria-label="Graduation cap sticker. Tap it, I dare you."><span aria-hidden="true">🎓</span></button>
+      <span class="brand">MEIS SENIORS 2027</span>
+    </header>
+
+    <div class="mid">
+      <h1 class="hey x3d" id="l1">MEIS'27</h1>
+      <p class="seniorsline" id="l2">SENIORS</p>
+      <p class="classline" id="l3">CLASS OF 2027 • SENIOR YEAR</p>
+      <p class="hand" id="l4">you found us.</p>
+      <p class="small" id="l5"><span id="l5t"></span><i class="cur" aria-hidden="true"></i></p>
+    </div>
+
+    <footer class="bottom">
+      <div class="cd-wrap">
+        <button class="ovalbtn" data-go="countdown" type="button">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#0A1F4A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12M6 21h12M7 3c0 6 10 6 10 18M17 3c0 12-10 12-10 18"/></svg>
+          <span id="ovaltxt">Don't Look Down</span>
+        </button>
+        <span class="hand lab" id="ovallab" aria-hidden="true">yes it's scary. tap anyway.</span>
+      </div>
+      <button class="tag" data-go="home" type="button">
+        <i class="hole" aria-hidden="true"></i><span>the whole website</span>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#0A1F4A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </footer>
+  </div>
+</section>
+
+<!-- ============ COUNTDOWN ============ -->
+<section class="screen" id="countdown" aria-label="Countdown">
+  <div class="page narrow">
+    <header class="pagehead">
+      <button class="back" data-back type="button">← back</button>
+      <button class="tag small" data-go="home" type="button"><i class="hole" aria-hidden="true"></i><span>the whole website</span>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#0A1F4A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </header>
+    <h2 class="title x3d">Tick. Tock.</h2>
+    <div class="tabs cdtabs" id="cdtabs" role="group" aria-label="Pick a countdown"></div>
+    <p class="hand sub" id="cdsub"></p>
+    <div class="cards" role="timer">
+      <div class="cdc c1"><b id="cd-d">0</b><span>days</span></div>
+      <div class="cdc c2"><b id="cd-h">00</b><span>hours</span></div>
+      <div class="cdc c3"><b id="cd-m">00</b><span>minutes</span></div>
+      <div class="cdc c4"><b id="cd-s">00</b><span>seconds</span></div>
+    </div>
+    <div class="road" aria-label="The road so far">
+      <svg viewBox="0 0 320 96" role="img" aria-label="A winding dotted road with a graduation cap riding toward the finish flag">
+        <path id="roadp" d="M16 64 C 62 8, 104 108, 164 56 S 262 6, 292 52" fill="none" stroke="#A9D6F7" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 12"/>
+        <text x="296" y="38" font-size="24" text-anchor="middle">🏁</text>
+        <g id="rider"><circle r="16" fill="#FFC83D" stroke="#fff" stroke-width="3"/><text font-size="17" text-anchor="middle" dominant-baseline="central">🎓</text></g>
+      </svg>
+      <p class="hand roadnote" id="roadnote"></p>
+    </div>
+    <div class="note"><i class="tape" aria-hidden="true"></i><p id="cdjoke"></p></div>
+    <p class="hand fin" id="cdfin" hidden>WE DID IT. Go hug somebody.</p>
+  </div>
+</section>
+
+<!-- ============ HOME ============ -->
+<section class="screen" id="home" aria-label="The whole website">
+  <div class="page">
+    <header class="pagehead">
+      <button class="back" data-go="splash" type="button">← front door</button>
+      <button class="msticker small" data-m type="button" aria-label="Graduation cap sticker"><span aria-hidden="true">🎓</span></button>
+    </header>
+
+    <div class="homegrid">
+      <div class="hero">
+        <p class="warn"><span aria-hidden="true">⚠️</span> <span id="warntxt">warning: contains pure legends</span></p>
+        <h1 class="meis x3d" id="meis">MEIS'27</h1>
+        <div class="row2">
+          <span class="seniors">Seniors</span>
+          <div class="pillrow"><span class="pill">Class of 2027</span><span class="bubble" id="bubble">Yes, we really are graduating.</span></div>
+        </div>
+        <span class="deco d1 dp" aria-hidden="true">✨</span>
+        <span class="deco d2 dp" aria-hidden="true">lol</span>
+      </div>
+      <div class="polcol">
+        <div class="polwrap">
+          <figure class="polaroid" id="grouppol"><i class="tape" aria-hidden="true"></i><div class="ph"></div><figcaption id="groupcap"></figcaption></figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="band" aria-hidden="true"><div class="track" id="band"></div></div>
+
+    <div class="menugrid">
+      <nav class="menu" aria-label="Pages">
+        <button class="bigbtn b1" data-go="photos" type="button"><span class="em" aria-hidden="true">📸</span><b>Show me the photos</b><small>Warning: bad angles included</small></button>
+        <button class="bigbtn b2" data-go="people" type="button"><span class="em" aria-hidden="true">🧑‍🎤</span><b>Who are these people?</b><small>Flip a card to see the baby photo</small></button>
+        <button class="bigbtn b3" data-go="trips" type="button"><span class="em" aria-hidden="true">🧭</span><b>Take me on a trip</b><small>Where we went (and got lost)</small></button>
+        <button class="bigbtn b4" data-go="mail" type="button"><span class="em" aria-hidden="true">💌</span><b>Secret mail (shhh)</b><small>Only the right person can read it</small></button>
+      </nav>
+      <aside class="side">
+        <div class="note rules"><i class="tape" aria-hidden="true"></i>
+          <p class="nt">Rules of this website:</p>
+          <ol id="rules"></ol>
+        </div>
+        <div class="wanted">
+          <i class="pin" aria-hidden="true"></i>
+          <b class="wt">WANTED</b>
+          <div class="mug" aria-hidden="true">?</div>
+          <p>Have you seen this senior? Find yourself in Who's Who.</p>
+          <button class="wbtn" data-go="people" type="button">I think it's me</button>
+          <small>reward: eternal glory (and a hug)</small>
+        </div>
+      </aside>
+    </div>
+
+    <div class="foot">
+      <button class="excuse" id="excuse" type="button"><small>Today's excuse for being late (tap for another):</small><span id="excusetxt"></span></button>
+      <div class="chips">
+        <button class="chip" id="sndbtn" type="button" aria-pressed="false">sound: off</button>
+        <button class="chip" id="tiltbtn" type="button">tilt with my phone</button>
+      </div>
+      <p class="tiny">made with questionable decisions &amp; zero teachers</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PHOTOS ============ -->
+<section class="screen" id="photos" aria-label="Photos">
+  <div class="page">
+    <header class="pagehead"><button class="back" data-back type="button">← back</button></header>
+    <h2 class="title x3d">The Photo Spin</h2>
+    <p class="hand sub">drag it. spin it. don't throw your phone.</p>
+    <div class="car" id="carousel"></div>
+    <div class="carbtns">
+      <button class="sbtn" id="carprev" type="button" aria-label="Previous photo">←</button>
+      <button class="sbtn" id="carnext" type="button" aria-label="Next photo">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PEOPLE ============ -->
+<section class="screen" id="people" aria-label="Who's Who">
+  <div class="page">
+    <header class="pagehead"><button class="back" data-back type="button">← back</button></header>
+    <h2 class="title x3d">Who's Who</h2>
+    <p class="hand sub">tap a card. the baby photo is the punchline.</p>
+    <label class="search"><span class="sr">Search by name</span><input id="psearch" type="search" placeholder="find yourself (we won't tell)" autocomplete="off"></label>
+    <div class="pgrid" id="pgrid"></div>
+    <p class="hand none" id="pnone" hidden>Nobody found. Suspicious. Check the spelling?</p>
+  </div>
+</section>
+
+<!-- ============ TRIPS ============ -->
+<section class="screen" id="trips" aria-label="Trips">
+  <div class="page narrow">
+    <header class="pagehead"><button class="back" data-back type="button">← back</button></header>
+    <h2 class="title x3d">Trips</h2>
+    <p class="hand sub">where we went (and got lost)</p>
+    <div class="route" id="tripl"></div>
+  </div>
+</section>
+
+<!-- ============ MAIL ============ -->
+<section class="screen" id="mail" aria-label="Secret mail">
+  <div class="page narrow">
+    <header class="pagehead"><button class="back" data-back type="button">← back</button></header>
+    <h2 class="title x3d">Secret Mail</h2>
+    <p class="hand sub">shhh. only the right person can read it.</p>
+
+    <div class="tabs">
+      <button class="tabbtn" id="tabw" type="button" aria-pressed="true">✍️ Write one</button>
+      <button class="tabbtn" id="tabr" type="button" aria-pressed="false">📬 My mailbox</button>
+    </div>
+
+    <div class="paper" id="panelw">
+      <p class="hand closed" id="mailclosed" hidden>The post office is closed. (The admin hasn't plugged it in yet.)</p>
+      <form id="sendform" autocomplete="off">
+        <label class="field"><span>To:</span>
+          <select id="to" name="to" required><option value="">calling the post office…</option></select></label>
+        <label class="field"><span>Say it. Nicely.</span>
+          <textarea name="text" rows="5" maxlength="600" required placeholder="you're a legend because…"></textarea></label>
+        <label class="field"><span>Sign it as… (empty = anonymous)</span>
+          <input name="from" maxlength="40" placeholder="a mystery person"></label>
+        <input class="hp" name="hp" tabindex="-1" aria-hidden="true" autocomplete="off">
+        <button class="go" type="submit" id="sendbtn">Send it 🚀</button>
+        <p class="msg" id="sendmsg" role="status"></p>
+      </form>
+    </div>
+
+    <div class="paper" id="panelr" hidden>
+      <form id="readform" autocomplete="off">
+        <label class="field"><span>I am…</span>
+          <select id="who" name="who" required><option value="">calling the post office…</option></select></label>
+        <label class="field"><span>My secret code (from WhatsApp)</span>
+          <input name="code" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="6" required placeholder="• • • • •"></label>
+        <button class="go" type="submit" id="readbtn">Open my mailbox 🔑</button>
+        <p class="msg" id="readmsg" role="status"></p>
+        <button class="linkbtn" id="adminlink" type="button">I'm the manager 🛡️</button>
+      </form>
+
+      <form id="adminform" hidden autocomplete="off">
+        <p class="hand boxhead">Manager door 🛡️</p>
+        <label class="field"><span>Manager code</span>
+          <input name="acode" type="password" inputmode="numeric" maxlength="12" required placeholder="• • • • • •"></label>
+        <button class="go" type="submit" id="adminbtn">Let me in</button>
+        <p class="msg" id="adminmsg" role="status"></p>
+        <button class="linkbtn" id="adminback" type="button">← never mind</button>
+      </form>
+
+      <div id="box" hidden>
+        <p class="hand boxhead" id="boxhead">Your mailbox. Eyes only. 👀</p>
+        <div id="letters"></div>
+        <button class="go alt" id="lockbtn" type="button">Lock it again 🔒</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div id="lb" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lbx" id="lbclose" type="button" aria-label="Close photo">✕</button>
+  <button class="lbn l" id="lbprev" type="button" aria-label="Previous photo">←</button>
+  <figure><img id="lbimg" alt=""><figcaption id="lbcap"></figcaption></figure>
+  <button class="lbn r" id="lbnext" type="button" aria-label="Next photo">→</button>
+</div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<div id="fx" aria-hidden="true"></div>
+
+<script src="content.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
